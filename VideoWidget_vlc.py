@@ -978,6 +978,7 @@ class VideoWidget(QFrame):
         if self.roomID != '0':
             self.playerRestart()
             self.setTitle()  # 同时获取最新直播状态
+            self.reloadDanmu()
             if self.liveStatus == 1:  # 直播中
                 self.getMediaURL.setConfig(
                     self.roomID, self.quality)  # 设置房号和画质
